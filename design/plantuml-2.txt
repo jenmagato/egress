@@ -1,0 +1,25 @@
+       ,--------------------------------------.                                     
+       |Activity                              |          ,-------------------------.
+       |--------------------------------------|          |Result                   |
+       |-connector: Connector                 |          |-------------------------|
+       |+__construct(connector: Connector)    |          |-data: array             |
+       |+get(endpoint: string, params: array) |          |+__construct(data: array)|
+       |+post(endpoint: string, data: array)  |          |+getData()               |
+       |+put(endpoint: string, data: array)   |          |+getStatusCode()         |
+       |+delete(endpoint: string, data: array)|          `-------------------------'
+       `--------------------------------------'                       |             
+                           |                                          |             
+                           |                                          |             
+,----------------------------------------------------.  ,--------------------------.
+|Connector                                           |  |ListResult                |
+|----------------------------------------------------|  |--------------------------|
+|-baseUri: string                                    |  |-data: array              |
+|-client: GuzzleHttpClient                           |  |+__construct(data: array) |
+|+__construct(baseUri: string)                       |  |+toArray()                |
+|+send(method: string, endpoint: string, data: array)|  `--------------------------'
+`----------------------------------------------------'                              
+                           |                                                        
+                  ,----------------.                                                
+                  |GuzzleHttpClient|                                                
+                  |----------------|                                                
+                  `----------------'                                                
