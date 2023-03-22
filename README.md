@@ -35,7 +35,7 @@ an HTTP client for making outbound HTTP requests. It uses the Guzzle library for
 - `src/Connector` - responsible for connecting to an API and sending requests
 - `src/Activity` - provides a convenient interface for performing various API operations
 - `src/Result` - packages API response data into a Result object
-- `src/ListResult` - packages a list of Result objects into a single object
+- `src/ListResult` - packages a list of Result objects into a object
 - `design` - Contains basic UML
 - `index.php` - Sample basic usage of the created program
 
